@@ -5,13 +5,14 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 # create service for giving path of Service class
-service_obj = Service("C:/Users/Admin/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe")
+#service_obj = Service("C:/Users/Admin/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe")
 
 # create webdriver object with providing service
-driver = webdriver.Chrome(service=service_obj)
+driver = webdriver.Chrome()
 
 # Open browser for any url/application you want to test
 driver.get("https://rahulshettyacademy.com/angularpractice/")
+driver.execute_script("window.scrollBy(0,document.body.scrollHeight);")
 
 
 """ To Select value from SELECT tag we need to use Select class
@@ -32,3 +33,6 @@ gender_object.select_by_index(2)   ==== give index starting from 0
 OR
 gender_object.select_by_value("Female") ==== give value="Female", if value attribute is present
 '''
+print(gender_object.first_selected_option.text)
+time.sleep(5)
+

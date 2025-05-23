@@ -1,6 +1,6 @@
 import pytest
-@pytest.mark.usefixtures("data")
 
+@pytest.mark.usefixtures("data")
 class  TestExample2:
     #fixture that returns data
     def test_editProfiles(self,data):

@@ -22,5 +22,3 @@ action.move_to_element(driver.find_element(By.ID,"mousehover")).click().perform(
 
 #right click on top
 action.context_click(driver.find_element(By.LINK_TEXT,"Top")).click().perform()
-
-action.mo
